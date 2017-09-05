@@ -28,16 +28,17 @@ int cx = 300;
 int cy = 300;
 int angle = 0;
 int mag = 100;
+float n_ang;
 
 void setup()
 {
   size(600, 600);  
 }
 
-
 void draw()
 {
-  rect(cx, cy, sin(radians(angle))*mag, cos(radians(angle))*mag );
+  n_ang = radians(angle);
+  rect(cx, cy, sin(n_ang)*mag, cos(n_ang)*mag );
   delay(20);
   
   angle+=4;
