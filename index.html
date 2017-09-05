@@ -49,6 +49,7 @@ void draw()
 
 </div>
 
+<br>
 
 <div style="display: inline-block">
   <video width="300"  autoplay controls loop>
@@ -57,11 +58,11 @@ void draw()
 </div>
 
 
-
+<br>
 
 <!-- ############ VIDEO 2 ############ -->
 <div style="display: inline-block">
-  <pre class="prettyprint">  	
+  <pre class="prettyprint">   
 float n_x,n_y,xx,yy = 300;
 
 void setup()
@@ -86,6 +87,7 @@ void draw()
 
 </div>
 
+<br>
 
 <div style="display: inline-block">
   <video width="300"  autoplay controls loop>
@@ -93,7 +95,7 @@ void draw()
   </video>
 </div>
 
-
+<br>
 
 <!-- ############ VIDEO 3 ############ -->
 <div style="display: inline-block">
@@ -123,6 +125,7 @@ void draw()
 
 </div>
 
+<br>
 
 <div style="display: inline-block">
   <video width="300"  autoplay controls loop>
@@ -131,14 +134,14 @@ void draw()
 </div>
 
   
-
+<br>
 
 <!-- ############ VIDEO 4 ############ -->
 <div style="display: inline-block">
   <pre class="prettyprint">   
 float[] angles = new float[3];
 float[] angles_add = {1,-5,10};
-float[] mag = {70,30,50};
+float[] mag = {70,50,30};
 float[] x = new float[3];
 float[] y = new float[3];
 float addx,addy;
@@ -150,22 +153,11 @@ void setup()
 }
 
 void draw()
-{  
-  
+{   
   strokeWeight(0);
-  fill(255, 255 );
+  fill(255, 250 );
   rect(0, 0, 600, 600);
   
-  strokeWeight(10);
-  
-  textSize(20);
-  fill(0);
-  text("11", 300,100);
-  text("4", 300,500);
-  text("32", 100,300);
-  text("7", 500,300);
-  
-  strokeWeight(8);
   for(int i=0; i<3; i++ ){ angles[i] += angles_add[i]; }
   
   for(int i=0; i<3; i++ )
@@ -183,19 +175,19 @@ void draw()
     
     x[i] = sin(radians(angles[i]))*mag[i] + addx;
     y[i] = cos(radians(angles[i]))*mag[i] + addy;    
-    line( addx,addy, x[i], y[i]  );
+    ellipse( x[i], y[i] , 10,10 );
   }
-
 }
 
   </pre>
 
 </div>
 
+<br>
 
 <div style="display: inline-block">
   <video width="300"  autoplay controls loop>
-    <source src="videos/clock.mp4">
+    <source src="videos/sin_en_sin.mp4">
   </video>
 </div>
 
