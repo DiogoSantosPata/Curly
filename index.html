@@ -81,6 +81,49 @@ void draw()
   </video>
 </div>
 
+  
+  
+  
+
+<!-- ############ VIDEO 3 ############ -->
+<div style="display: inline-block">
+  <pre class="prettyprint">  	
+float cx, cy;
+float angle = 0;
+boolean start = false;
+
+void setup(){ size(600,600); }
+
+void draw()
+{
+  angle+=5;
+  background(255);
+  cx = 300 + sin(radians(angle))*50; 
+  cy = 300 +  cos(radians(angle))*50;
+  line(cx, 0, cx, 600);
+  line(cx+10, 0, cx+10, 600);
+  line(cx-10, 0, cx-10, 600);
+  line(100, cy-100, 500, cy-100);
+  line(100, cy+100, 500, cy+100);
+  fill(255,0,0);  
+  ellipse( cx+(500-cx)/2, 300,  14,14  );
+}
+
+  </pre>
+
+</div>
+
+
+<div style="display: inline-block">
+  <video width="320"  autoplay controls>
+    <source src="videos/punto.mp4">
+  </video>
+</div>
+
+  
+  
+  
+  
 
 
 
