@@ -1,16 +1,90 @@
 <html>
 
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
 <head>
 <h1> C.U.R.L.Y.</h1>
 </head>
 
   
 <body>
-  <video width="320" height="240" autoplay controls>
+
+<!-- ############ VIDEO 1 ############ -->
+<div style="display: inline-block">
+  <pre class="prettyprint">
+int cx = 300; 
+int cy = 300;
+int angle = 0;
+int mag = 100;
+
+void setup()
+{
+  size(600, 600);  
+}
+
+
+void draw()
+{
+  rect(cx, cy, sin(radians(angle))*mag, cos(radians(angle))*mag );
+  delay(20);
+  
+  angle+=4;
+  mag+=random(-10,10);
+}
+
+  </pre>
+
+</div>
+
+
+<div style="display: inline-block">
+  <video width="320"  autoplay controls>
     <source src="videos/meaning_rien.mp4">
   </video>
+</div>
+
+
+
+<h1></h1>
+
+<!-- ############ VIDEO 2 ############ -->
+<div style="display: inline-block">
+  <pre class="prettyprint">  	
+float n_x,n_y,xx,yy = 300;
+
+void setup()
+{
+  size(600,600);
+}
+
+void draw()
+{
+  n_x = random(100,500);
+  n_y = random(100,500);  
+  line(  xx,yy,n_x,n_y );
+  
+  xx = n_x;
+  yy = n_y;
+  
+  rect(0, 0, 600, 600);
+  fill(255, 20);
+}
+
+  </pre>
+
+</div>
+
+
+<div style="display: inline-block">
+  <video width="320"  autoplay controls>
+    <source src="videos/linhas_contra.mp4">
+  </video>
+</div>
+
+
+
+
   
 </body>
   
 </html>
-
