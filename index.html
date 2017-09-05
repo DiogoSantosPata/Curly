@@ -131,6 +131,75 @@ void draw()
 </div>
 
   
+
+
+<!-- ############ VIDEO 4 ############ -->
+<div style="display: inline-block">
+  <pre class="prettyprint">   
+float[] angles = new float[3];
+float[] angles_add = {1,-5,10};
+float[] mag = {70,30,50};
+float[] x = new float[3];
+float[] y = new float[3];
+float addx,addy;
+
+void setup()
+{
+  size(600,600);  
+  for(int i=0; i<3; i++ ){ angles[i] = 0; }  
+}
+
+void draw()
+{  
+  
+  strokeWeight(0);
+  fill(255, 255 );
+  rect(0, 0, 600, 600);
+  
+  strokeWeight(10);
+  
+  textSize(20);
+  fill(0);
+  text("11", 300,100);
+  text("4", 300,500);
+  text("32", 100,300);
+  text("7", 500,300);
+  
+  strokeWeight(8);
+  for(int i=0; i<3; i++ ){ angles[i] += angles_add[i]; }
+  
+  for(int i=0; i<3; i++ )
+  {
+    if(  i==0 )
+    { 
+      addx = 300;
+      addy = 300;
+    }
+    else
+    {
+      addx = x[i-1];
+      addy = y[i-1];
+    }
+    
+    x[i] = sin(radians(angles[i]))*mag[i] + addx;
+    y[i] = cos(radians(angles[i]))*mag[i] + addy;    
+    line( addx,addy, x[i], y[i]  );
+  }
+
+}
+
+  </pre>
+
+</div>
+
+
+<div style="display: inline-block">
+  <video width="300"  autoplay controls loop>
+    <source src="videos/clock.mp4">
+  </video>
+</div>
+
+  
   
 
   
