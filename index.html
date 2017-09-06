@@ -194,6 +194,46 @@ void draw()
   
   
 
+<!-- ############ VIDEO 5 ############ -->
+<br>
+<div style="display: inline-block">
+  <pre class="prettyprint">   
+int i = 0;
+float pos_y = random(100,500);
+int n_blocks = int(random(5,15));
+
+void setup()
+{
+  size(600,600);
+  background(255);
+}
+
+void draw()
+{
+    fill(255, 4 );
+    rect(0, 0, 600, 600);    
+    rect(  50+20*i, pos_y, 20,20  );
+    delay(10);
+    i+=1;    
+    if(i>n_blocks)
+    {
+      i=0;
+      pos_y = random(100,500);
+      n_blocks = int(random(5,15));
+    }  
+}
+  </pre>
+
+</div>
+
+<br>
+
+<div style="display: inline-block">
+  <video width="300"  autoplay controls loop>
+    <source src="videos/stripe_squares.mp4">
+  </video>
+</div>
+
   
 </body>
   
