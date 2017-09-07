@@ -234,6 +234,89 @@ void draw()
   </video>
 </div>
 
+
+
+
+
+
+
+<!-- ############ VIDEO 6 ############ -->
+<br>
+<div style="display: inline-block">
+  <pre class="prettyprint">   
+int hight = 300;
+
+void setup()
+{
+  size(600,600);
+  background(255);
+}
+
+void draw()
+{
+  strokeWeight(0);
+  fill(255, 10);
+  rect(0, 0, 600, 600);
+  strokeWeight(10);
+  line( hight, 300, hight, hight );  
+  hight += random(-10,11);
+}
+  </pre>
+
+</div>
+
+<br>
+
+<div style="display: inline-block">
+  <video width="300"  autoplay controls loop>
+    <source src="videos/disco_wall.mp4">
+  </video>
+</div>
+
+
+
+
+
+
+<!-- ############ VIDEO 6 ############ -->
+<br>
+<div style="display: inline-block">
+  <pre class="prettyprint">   
+int angle = 180;
+int direction = 1;
+float xx,yy;
+
+void setup(){ size(400,400); strokeWeight(1); }
+
+void draw()
+{
+  fill(255, 255 );
+  rect(0, 0, 400, 400);  
+  xx = sin(radians(angle))*50+100;
+  yy = cos(radians(angle))*50+150;
+  for(int i=0;i<3; i++){ rect( xx+i*10, xx, yy, yy); }
+  for(int i=0;i<3; i++){ ellipse( xx+50+i*15, xx+angle%360, 9, 9); }
+  angle += direction;  
+}
+  </pre>
+
+</div>
+
+<br>
+
+<div style="display: inline-block">
+  <video width="300"  autoplay controls loop>
+    <source src="videos/quadros_de_bolas.mp4">
+  </video>
+</div>
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+
+
+
+
+
   
 </body>
   
