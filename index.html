@@ -278,7 +278,7 @@ void draw()
 
 
 
-<!-- ############ VIDEO 6 ############ -->
+<!-- ############ VIDEO 7 ############ -->
 <br>
 <div style="display: inline-block">
   <pre class="prettyprint">   
@@ -309,6 +309,45 @@ void draw()
     <source src="videos/quadros_de_bolas.mp4">
   </video>
 </div>
+
+
+
+
+
+
+
+
+<!-- ############ VIDEO 8 ############ -->
+<br>
+<div style="display: inline-block">
+  <pre class="prettyprint">   
+float x_pos = 0;
+
+void setup(){ size(600, 400); }
+
+void draw()
+{  
+  line(x_pos,0,x_pos,400);  
+  ellipse(x_pos,sin(x_pos)*10+200,10,10);
+  rect(0, 0, 600, 600);
+  fill(255, 30);  
+  delay(20);  
+  x_pos += 20;
+  if(x_pos>2000){x_pos=0;}
+}
+  </pre>
+
+</div>
+
+<br>
+
+<div style="display: inline-block">
+  <video width="300"  autoplay controls loop>
+    <source src="videos/sin_ti.mp4">
+  </video>
+</div>
+
+
 
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
