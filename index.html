@@ -30,17 +30,13 @@ int angle = 0;
 int mag = 100;
 float n_ang;
 
-void setup()
-{
-  size(600, 600);  
-}
+void setup(){ size(600, 600); }
 
 void draw()
 {
   n_ang = radians(angle);
   rect(cx, cy, sin(n_ang)*mag, cos(n_ang)*mag );
-  delay(20);
-  
+  delay(20);  
   angle+=4;
   mag+=random(-10,10);
 }
@@ -65,20 +61,15 @@ void draw()
   <pre class="prettyprint">   
 float n_x,n_y,xx,yy = 300;
 
-void setup()
-{
-  size(600,600);
-}
+void setup(){ size(600,600); }
 
 void draw()
 {
   n_x = random(100,500);
   n_y = random(100,500);  
-  line(  xx,yy,n_x,n_y );
-  
+  line(  xx,yy,n_x,n_y );  
   xx = n_x;
-  yy = n_y;
-  
+  yy = n_y;  
   rect(0, 0, 600, 600);
   fill(255, 20);
 }
