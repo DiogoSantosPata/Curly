@@ -483,10 +483,12 @@ void setup() {  size(400, 400); }
 
 void draw() {
   fill(255,255);
+  strokeWeight(0);
   rect(0,0,400,400);  
   theta += .01;
   gamma += .05;
   x = sin(theta)*sin(gamma)*150+200;
+  strokeWeight(2);
   line(0,x,400,x);
   line(x,0,x,400);
   rect(x,20,400,x-60);
@@ -504,6 +506,36 @@ void draw() {
   <img src="gifs/theta_gamma_quadrado.gif" style="width:250px;">
 </div>
 
+
+
+
+<!-- ############ VIDEO 13 ############ -->
+<br>
+<div style="display: inline-block">
+  <pre class="prettyprint">   
+float theta,gamma;
+void setup(){ size(400, 400); }
+
+void draw() {
+  fill(255,15);
+  rect(0,0,400,400);
+  rect( cos(theta)*100+200,cos(gamma)*100+200,
+        sin(theta)*150,sin(gamma)*150);
+  theta+=.05; gamma+=.1;
+  delay(50);
+}
+  </pre>
+
+</div>
+
+<br>
+
+<div style="display: inline-block">
+  <!-- <video width="300"  autoplay controls loop>
+    <source src="videos/quadrados_deforma.mp4">
+  </video> -->
+  <img src="gifs/quadrados_deforma.gif" style="width:250px;">
+</div>
 
 
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
