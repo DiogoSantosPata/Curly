@@ -483,12 +483,10 @@ void setup() {  size(400, 400); }
 
 void draw() {
   fill(255,255);
-  strokeWeight(0);
   rect(0,0,400,400);  
   theta += .01;
   gamma += .05;
   x = sin(theta)*sin(gamma)*150+200;
-  strokeWeight(2);
   line(0,x,400,x);
   line(x,0,x,400);
   rect(x,20,400,x-60);
