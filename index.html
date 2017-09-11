@@ -584,15 +584,17 @@ float[] angles = {0,0,0,0,0,0,0,0,0};
 float rad;
 void setup(){ size(600, 400); }
 
-void draw() {
+void draw() 
+{
   fill(255,255);
   rect(0,0,600,400);
-  for(int i=0; i<speeds.length; i++)  
+  for(int i=0; i< speeds.length ; i++)  
   {   
     ellipse( sin(angles[i%9])*50+100,cos(angles[i%9])*50+200, 10, 10);
     angles[i] += speeds[i];
   }  
 }
+
   </pre>
 
 </div>
