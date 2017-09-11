@@ -538,6 +538,42 @@ void draw() {
 </div>
 
 
+
+
+
+
+<!-- ############ VIDEO 13 ############ -->
+<br>
+<div style="display: inline-block">
+  <pre class="prettyprint">   
+float theta,ang;
+void setup(){ size(400, 400); }
+
+void draw() {
+  fill(255,25);
+  rect(0,0,400,400);
+  ang = radians(theta);
+  line( 50, 200, sin(ang)*100+200,cos(ang)*100+200 );
+  line( sin(ang)*100+200,cos(ang)*100+200, 350,200 ); 
+  theta+=5;
+  delay(25);    
+}
+  </pre>
+
+</div>
+
+<br>
+
+<div style="display: inline-block">
+  <!-- <video width="300"  autoplay controls loop>
+    <source src="videos/olho_circulo.mp4">
+  </video> -->
+  <img src="gifs/olho_circulo.gif" style="width:250px;">
+</div>
+
+
+
+
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
 
