@@ -647,6 +647,44 @@ void draw() {
 
 
 
+<!-- ############ VIDEO 16 ############ -->
+<br>
+<div style="display: inline-block">
+  <pre class="prettyprint">   
+float x;
+void setup() {  size(800, 400); }
+
+void draw() {
+  fill(255,255);
+  rect(0,0,800,400);  
+  x += 1;
+  for(int i=0;i<20;i++)
+  {
+    line( (x+i*50)%800 +100 ,0,  (x+i*50)%800 ,400);
+  }
+}
+  </pre>
+
+</div>
+
+<br>
+
+<div style="display: inline-block">
+  <!-- <video width="300"  autoplay controls loop>
+    <source src="videos/barras_p_direita.mp4">
+  </video> -->
+  <img src="gifs/barras_p_direita.gif" style="width:250px;">
+</div>
+ 
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+
+
+
+
+
+
+
   
 </body>
   
