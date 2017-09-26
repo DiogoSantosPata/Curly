@@ -760,6 +760,40 @@ void draw()
 
 
 
+<!-- ############ VIDEO 19 ############ -->
+<br>
+<div style="display: inline-block">
+  <pre class="prettyprint">   
+float angle, pos;
+void setup(){  size(600,600); }
+
+void draw()
+{
+  background(255);  
+  for(int x=0; x<20; x++)
+  {
+    pos = sin( radians(angle*(x+1)) )*50;
+    ellipse(  pos+200+x*10, 20*x+100, 50,50 );   
+  }    
+  angle+=.5;  
+}
+  </pre>
+
+</div>
+
+<br>
+
+<div style="display: inline-block">
+  <video width="300"  autoplay controls loop>
+    <source src="videos/synch_no.mp4">
+  </video>
+  <!-- <img src="gifs/synch_no.gif" style="width:250px;"> -->
+</div>
+ 
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+
+
 
 
   
