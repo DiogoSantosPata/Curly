@@ -794,6 +794,42 @@ void draw()
 
 
 
+<!-- ############ VIDEO 20 ############ -->
+<br>
+<div style="display: inline-block">
+  <pre class="prettyprint">   
+float angle, pos;
+void setup(){size(600,600);}
+
+void draw()
+{  
+  background(255);  
+  pos = sin(radians(angle))*50;
+  for(int x=0; x<10; x++){
+    for(int y=0; y<10; y++){
+      ellipse(  x*50+pos, y*50+50, 12,12 );
+    }
+  }  
+  angle += 2;
+}
+  </pre>
+
+</div>
+
+<br>
+
+<div style="display: inline-block">
+  <!-- <video width="300"  autoplay controls loop>
+    <source src="videos/bolas_lados.mp4">
+  </video> -->
+  <img src="gifs/bolas_lados.gif" style="width:250px;">
+</div>
+ 
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+
+
+
 
 
   
