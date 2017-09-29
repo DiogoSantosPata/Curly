@@ -830,6 +830,45 @@ void draw()
 
 
 
+<!-- ############ VIDEO 21 ############ -->
+<br>
+<div style="display: inline-block">
+  <pre class="prettyprint">   
+float angle,pos_0_x,pos_0_y,pos_1_x,pos_1_y;
+void setup()
+{
+  size(600,600);
+  pos_0_x = sin(radians(angle))*100+300;
+  pos_0_y = cos(radians(angle))*100+300;
+}
+
+void draw()
+{ 
+  fill(255,40);  
+  rect(0,0,600,600);  
+  angle += 370.0/6.0;  
+  pos_1_x = sin(radians(angle))*100+300;
+  pos_1_y = cos(radians(angle))*100+300;    
+  line( pos_0_x, pos_0_y , pos_1_x, pos_1_y  );  
+  pos_0_x = pos_1_x; pos_0_y = pos_1_y;    
+}
+  </pre>
+
+</div>
+
+<br>
+
+<div style="display: inline-block">
+  <!-- <video width="300"  autoplay controls loop>
+    <source src="videos/hexagono_roda.mp4">
+  </video> -->
+  <img src="gifs/hexagono_roda.gif" style="width:250px;">
+</div>
+ 
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+
+
 
 
   
