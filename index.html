@@ -869,6 +869,54 @@ void draw()
 
 
 
+<!-- ############ VIDEO 23 ############ -->
+<br>
+<div style="display: inline-block">
+  <pre class="prettyprint">   
+float angle, c_x,c_y,this_xx, this_yy;
+float elip_rad = 20;
+void setup(){ size(400,400); }
+void draw()
+{  
+  background(255);
+  fill(0);  
+  c_x = sin(radians(angle))*100;
+  c_y = cos(radians(angle))*100;      
+  ellipse( 200, 200, 100,100  );
+  ellipse( 200+c_x, 200+c_y, 100,100 );
+  
+  for(int xx=0; xx<10; xx++){
+    for(int yy=0; yy<10; yy++){       
+      this_xx = xx*40+20;
+      this_yy = yy*40+20;      
+      c_x = sin(radians(angle))*elip_rad;
+      c_y = cos(radians(angle))*elip_rad;      
+      ellipse( this_xx, this_yy, elip_rad, elip_rad  );
+      ellipse( this_xx+c_x, this_yy+c_y, elip_rad, elip_rad  );
+    }
+  }
+  angle += 4;  
+}
+  </pre>
+
+</div>
+
+<br>
+
+<div style="display: inline-block">
+  <!-- <video width="300"  autoplay controls loop>
+    <source src="videos/hexagono_roda.mp4">
+  </video> -->
+  <img src="gifs/black_dots.gif" style="width:250px;">
+</div>
+ 
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+
+
+
+
+
 
 
   
